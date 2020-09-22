@@ -1,4 +1,4 @@
-# dam - dynamic window manager
+# dwm - dynamic window manager
 
 ## patches
  - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
