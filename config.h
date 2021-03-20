@@ -132,7 +132,7 @@ static Key keys[] = {
 		{ MODKEY,	               	    XK_w, 	   spawn,          SHCMD("whatsapp-nativefier")},
 		{ MODKEY,	               	    XK_s, 	   spawn,          SHCMD("spotify")},
 		{ MODKEY,	               	    XK_b, 	   spawn,          SHCMD("rofi-bt")},
-		{ MODKEY,	               	    XK_Escape, spawn,		   SHCMD("betterlockscreen -l")},
+		{ MODKEY,	               	    XK_Escape, spawn,		   SHCMD("lock")},
 		{ MODKEY|ShiftMask,	     	    XK_Escape, spawn,		   SHCMD("rofi-power")},
 		{ MODKEY,	             	    XK_d,      spawn,		   SHCMD("rofi -combi-modi window#drun#run -show combi")},
 		{ MODKEY,	             	    XK_v,      spawn,		   SHCMD("st -e nvim")},
