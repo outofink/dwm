@@ -1,10 +1,10 @@
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;//1        /* border pixel of windows */
 static const unsigned int snap      = 16;       /* snap pixel */
-static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 0;//10       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 0;//10       /* vert inner gap between windows */
+static const unsigned int gappoh    = 0;//10       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 0;//10       /* vert outer gap between windows and screen edge */
 static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 0;       /* horizontal padding of bar */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
@@ -52,7 +52,8 @@ static const Rule rules[] = {
 	/* class		instance	title			tags mask	isfloating	isterminal	noswallow	monitor */
 	{ "Gimpy",		NULL,		NULL,			0,			1,			0,			0,			-1 },
 	{ "Firefox",	NULL,		NULL,			1 << 8,		0,			0,			-1,			-1 },
-	{ "st",			NULL,		NULL,			0,			0,			1,			0,			-1 },
+	{ "alacritty",	NULL,		NULL,			0,			0,			1,			0,			-1 },
+	{ "st",     	NULL,		NULL,			0,			0,			1,			0,			-1 },
 	{ NULL,			NULL,		"Event Tester",	0,			0,			0,			1,			-1 }, /* xev */
 
 	{ NULL,			"spterm",	NULL,			SPTAG(0),	1,			1,			0,			-1 },
@@ -63,7 +64,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol	arrange function */
@@ -92,7 +93,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 #include <X11/XF86keysym.h>
 static Key keys[] = {
@@ -129,13 +130,14 @@ static Key keys[] = {
 		{ MODKEY,	                    XK_i,      togglescratch,  {.ui = 1}},
 		{ MODKEY,	                    XK_slash,  togglescratch,  {.ui = 2}},
 		{ MODKEY,	               	    XK_c, 	   spawn,          SHCMD("brave")},
+		{ MODKEY,	               	    XK_t, 	   spawn,          SHCMD("thunar")},
 		{ MODKEY,	               	    XK_w, 	   spawn,          SHCMD("whatsapp-nativefier")},
 		{ MODKEY,	               	    XK_s, 	   spawn,          SHCMD("spotify")},
 		{ MODKEY,	               	    XK_b, 	   spawn,          SHCMD("rofi-bt")},
 		{ MODKEY,	               	    XK_Escape, spawn,		   SHCMD("lock")},
 		{ MODKEY|ShiftMask,	     	    XK_Escape, spawn,		   SHCMD("rofi-power")},
 		{ MODKEY,	             	    XK_d,      spawn,		   SHCMD("rofi -modi combi -combi-modi window#drun#run -show combi")},
-		{ MODKEY,	             	    XK_v,      spawn,		   SHCMD("st -e nvim")},
+		{ MODKEY,	             	    XK_v,      spawn,		   SHCMD("alacritty -e nvim")},
 		{ MODKEY,	             	    XK_r,      spawn,		   SHCMD("pkill dwmblocks; sleep 2; dwmblocks &")},
 		{ 0,		             	    XK_Print,  spawn,		   SHCMD("scrot -m ~/pics/screenshots/%s_%H%M_%d.%m.%Y.png")},
 		/**/
@@ -148,7 +150,7 @@ static Key keys[] = {
 		{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 		{ MODKEY,                       XK_space,  zoom,           {0} },
 		{ MODKEY,                       XK_Tab,    view,           {0} },
-		{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+		{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
 		{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 		{ MODKEY,			            XK_f,      togglefullscr,  {0} },
 		{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
