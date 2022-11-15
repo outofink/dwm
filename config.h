@@ -13,7 +13,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 30;
 static const char *fonts[] = { "JetBrainsMono Nerd Font:size=14:antialias=true:autohint=true" };
-static const char dmenufont[]       = "JetBrainsMono Nerd Font Mono:size=14";
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=14";
 static const char col_gray1[]       = "#2c323b";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -139,7 +139,7 @@ static Key keys[] = {
 		{ MODKEY,	             	    XK_d,      spawn,		   SHCMD("rofi -modi combi -combi-modi window#drun#run -show combi")},
 		{ MODKEY,	             	    XK_v,      spawn,		   SHCMD("alacritty -e nvim")},
 		{ MODKEY,	             	    XK_r,      spawn,		   SHCMD("pkill dwmblocks; sleep 2; dwmblocks &")},
-		{ 0,		             	    XK_Print,  spawn,		   SHCMD("scrot -m ~/pics/screenshots/%s_%H%M_%d.%m.%Y.png")},
+		{ 0,		             	    XK_Print,  spawn,		   SHCMD("scrot -s -m ~/pics/screenshots/%s_%H%M_%d.%m.%Y.png")},
 		/**/
 		{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 		{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
