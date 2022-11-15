@@ -1,14 +1,13 @@
 # dwm - dynamic window manager
+### v6.4
 
 ## patches
  - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
  - [notitle](https://dwm.suckless.org/patches/notitle/)
- - [bar-height](https://dwm.suckless.org/patches/bar_height/)
  - [scratchpads](https://dwm.suckless.org/patches/scratchpads/)
  - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
  - [swallow](https://dwm.suckless.org/patches/swallow/)
  - [hide_vacant_tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
- - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
 
 ## theme
 
