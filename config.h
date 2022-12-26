@@ -125,7 +125,7 @@ static Key keys[] = {
 	{ MODKEY,	               	    XK_Escape, spawn,		   SHCMD("lock")},
 	{ MODKEY|ShiftMask,	     	    XK_Escape, spawn,		   SHCMD("rofi-power")},
 	{ MODKEY,	             	    XK_d,      spawn,		   SHCMD("rofi -modi combi -combi-modi window#drun#run -show combi")},
-	{ MODKEY,	             	    XK_e,      spawn,		   SHCMD("xdotool type --delay 0 $(grep -v '^#' ~/statusbar/bookmarks | rofi -dmenu -i | cut -d' ' -f2)")},
+	{ MODKEY,	             	    XK_e,      spawn,		   SHCMD("xdotool type --delay 0 $(grep -v '^#' ~/.bookmarks | rofi -dmenu -i | cut -d' ' -f2)")},
 	{ MODKEY,	             	    XK_v,      spawn,		   SHCMD("alacritty -e nvim")},
 	{ MODKEY|ShiftMask,       	    XK_h,      spawn,		   SHCMD("alacritty -e htop")},
 	{ MODKEY,	             	    XK_r,      spawn,		   SHCMD("pkill dwmblocks; sleep 2; dwmblocks &")},
