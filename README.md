@@ -8,6 +8,7 @@
  - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
  - [swallow](https://dwm.suckless.org/patches/swallow/)
  - [hide_vacant_tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
+ - [bidi](https://dwm.suckless.org/patches/bidi/)
 
 ## theme
 
