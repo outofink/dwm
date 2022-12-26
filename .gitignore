@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+README
+*.o
+*.orig
+*.rej
+dwm
