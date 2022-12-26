@@ -126,6 +126,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	     	    XK_Escape, spawn,		   SHCMD("rofi-power")},
 	{ MODKEY,	             	    XK_d,      spawn,		   SHCMD("rofi -modi combi -combi-modi window#drun#run -show combi")},
 	{ MODKEY,	             	    XK_v,      spawn,		   SHCMD("alacritty -e nvim")},
+	{ MODKEY|ShiftMask,       	    XK_h,      spawn,		   SHCMD("alacritty -e htop")},
 	{ MODKEY,	             	    XK_r,      spawn,		   SHCMD("pkill dwmblocks; sleep 2; dwmblocks &")},
 	{ 0,		             	    XK_Print,  spawn,		   SHCMD("scrot -s -m ~/pics/screenshots/%s_%H%M_%d.%m.%Y.png")},
 	/**/
